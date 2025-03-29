@@ -16,7 +16,7 @@ const UserPage = () => {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/api/userslist",
+      const res = await axios.get("https://user-list-crud-opration-backend.vercel.app/api/userslist",
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -43,7 +43,7 @@ const UserPage = () => {
   }
   const handleDelete = async (id) => {
     try {
-      const res = await axios.delete(`http://localhost:3000/api/delete/${id}`, {
+      const res = await axios.delete(`https://user-list-crud-opration-backend.vercel.app/api/delete/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         }
