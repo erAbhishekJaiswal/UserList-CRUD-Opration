@@ -47,10 +47,10 @@ const Login = () => {
         localStorage.setItem('id', response.data.user._id);
         setToken(response.data.token);
         console.log(response.data);
-      })
-      .catch(error => {
-      console.error(error.message);
-      });
+      // })
+      // .catch(error => {
+      // console.error(error.message);
+      // });
 
       navigate(`/users`);
     } catch (error) {
