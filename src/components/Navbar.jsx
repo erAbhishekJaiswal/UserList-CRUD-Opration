@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import '../cssfiles/navbar.css'
 import { useNavigate } from 'react-router-dom';
+import { CgProfile } from "react-icons/cg";
 
 const Navbar = () => {
   const [token, setToken] = useState('');
@@ -30,8 +31,8 @@ const Navbar = () => {
         <ul className='ullinks'>
           {token ?
             <>
-              <li className='list'><Link className='link' to={`/myprofile/${id}`}>My Profile</Link></li>
-              <li className='list'><Link className='link' to={'/users'}>Users </Link></li>
+              <li className='list'><Link className='link' to={`/myprofile/${id}`}>Users</Link></li>
+              <li className='list'><Link className='link' to={'/users'}>< CgProfile /> </Link></li>
               {/* <li className='list'><Link className='link' to={'/rolemanagement'}>Role Management</Link></li> */}
               <li className='list'><button onClick={logoutbtn} className='logoutbtn'>Logout</button></li>
             </> : <>
