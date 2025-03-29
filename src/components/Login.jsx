@@ -121,7 +121,9 @@ const Login = () => {
     // Here you would normally authenticate the user, for now we just log them in
     console.log('Logged in with:', email, password);
     try {
-      const res = await axios.post('http://localhost:3000/api/login', { email, password });
+      const res = await axios.post('https://user-list-crud-opration-backend.vercel.app/api/login', { email, password } , {
+  timeout: 7000  // Timeout after 7 seconds
+});
       console.log(res.data.user);
       const id = res.data.user._id;
       console.log(res.data.token);
