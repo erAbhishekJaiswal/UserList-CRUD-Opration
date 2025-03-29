@@ -22,7 +22,7 @@ const Register = () => {
         console.log('Registered with:',firstname, lastname, email, password);
 
         try {
-            axios.post('http://localhost:3000/api/register', { firstname, lastname, email, password });
+            axios.post('https://user-list-crud-opration-backend.vercel.app/api/register', { firstname, lastname, email, password });
             alert('Registration successful!');
             setFirstname('');
             setLastname('');
