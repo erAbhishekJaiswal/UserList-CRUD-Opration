@@ -1,0 +1,84 @@
+.user-page {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: darkcyan;
+  }
+  .user-list{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    width: 100%;
+  }
+  .user-page h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+.usercard{
+    width: 17rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #9de5ff;
+    padding: 10px;
+    /* margin-bottom: 10px; */
+    border-radius: 5px;
+    border: 1px solid blanchedalmond;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    gap: 10px;
+}
+.image{
+    width: 95%;
+    height: 240px;
+    border-radius: 50%;
+    border: 1px solid black;
+    object-fit: cover;
+}
+.textbox{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    /* margin-left: 10px; */
+}
+.textbox h3{
+    margin: 0;
+    font-size: 1.2rem;
+}
+.textbox p{
+    margin: 0;
+    font-size: 1rem;
+}
+.btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+.update-btn{
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  background-color: #00ff00;
+  cursor: pointer;
+}
+.delete-btn{
+  width: 22%;
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  background-color: #fa0000;
+  cursor: pointer;
+  color: white;
+}
