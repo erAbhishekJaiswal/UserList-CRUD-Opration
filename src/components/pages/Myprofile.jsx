@@ -25,7 +25,7 @@ const Myprofile = () => {
   }
   const handleDelete = async (id) => {
     try {
-      const res = await axios.delete(`http://localhost:3000/api/delete/${id}`, {
+      const res = await axios.delete(`https://user-list-crud-opration-backend.vercel.app/api/delete/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         }
@@ -38,7 +38,7 @@ const Myprofile = () => {
 
   const fatchData = async () => {
     try {
-      const res = await axios.get(`http://localhost:3000/api/user/${id}`, {
+      const res = await axios.get(`https://user-list-crud-opration-backend.vercel.app/api/user/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
