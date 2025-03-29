@@ -32,28 +32,17 @@ const Login = () => {
     // Here you would normally authenticate the user, for now we just log them in
     console.log('Logged in with:', email, password);
     try {
-      // const res = await axios.post('https://user-list-crud-opration-backend.vercel.app/api/login', { email, password });
-      // console.log(res.data.user);
-      // const id = res.data.user._id;
-      // console.log(res.data.token);
-      // localStorage.setItem('token', res.data.token);
-      // localStorage.setItem('id', res.data.user._id);
-      // setToken(res.data.token);
-      axios.post('https://user-list-crud-opration-backend.vercel.app/api/login', { email, password})
-      .then(response => {
-        const id = response.data.user._id;
-        console.log(response.data.token);
-        localStorage.setItem('token', response.data.token);
-        localStorage.setItem('id', response.data.user._id);
-        setToken(response.data.token);
-        console.log(response.data);
-         navigate(`/users`);
-      })
-      .catch(error => {
-      console.error(error.message);
-      });
-
-     
+      const res = await axios.post('https://user-list-crud-opration-backend.vercel.app/api/login', { email, password });
+      console.log(res.data.user);
+      const id = res.data.user._id;
+      console.log(res.data.token);
+      localStorage.setItem('token', res.data.token);
+      localStorage.setItem('id', res.data.user._id);
+      setToken(res.data.token);
+      navigate(`/users`);
+    } catch (error) {
+      console.log(error);
+    }
     // Redirect to the dashboard (or home page)
     }
   };
