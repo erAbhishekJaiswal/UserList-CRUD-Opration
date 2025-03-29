@@ -130,7 +130,7 @@ const Login = () => {
       setToken(res.data.token);
       navigate(`/users`);
     } catch (error) {
-      console.log(error);
+      console.log(error.message);
     }
     // Redirect to the dashboard (or home page)
     
