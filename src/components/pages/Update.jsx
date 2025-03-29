@@ -17,7 +17,7 @@ const Update = () => {
     }, []);
     const fatchData = async () => {
         try {
-          const res = await axios.get(`http://localhost:3000/api/user/${id}`, {
+          const res = await axios.get(`https://user-list-crud-opration-backend.vercel.app/api/user/${id}`, {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
@@ -36,7 +36,7 @@ const Update = () => {
     const handleUpdate = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.put(`http://localhost:3000/api/user/${id}`, {
+            const res = await axios.put(`https://user-list-crud-opration-backend.vercel.app/api/user/${id}`, {
                 firstname,
                 lastname,
                 email
