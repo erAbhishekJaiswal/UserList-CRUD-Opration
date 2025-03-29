@@ -1,7 +1,6 @@
-Here is a sample `README.md` file for your frontend project, which includes user login, registration, user listing, user update, and user deletion functionality:
+# Frontend Project
 
 ```markdown
-# Frontend Project
 
 ## Project Overview
 
