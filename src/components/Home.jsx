@@ -1,6 +1,6 @@
 import React from 'react'
 import '../cssfiles/HomePage.css';
-import axios from axios;
+import axios from 'axios';
 const Home = () => {
  // Mock user data
   const mockUsers = [
