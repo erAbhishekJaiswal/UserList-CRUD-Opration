@@ -1,13 +1,24 @@
-import React from 'react'
+import React,{ useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import '../cssfiles/HomePage.css';
 import axios from 'axios';
 const Home = () => {
+ const [token, setToken] = useState('');
+  const navigate = useNavigate();
  // Mock user data
   const mockUsers = [
     { id: 1, name: 'John Doe', email: 'john@example.com', password: 'john', role: 'Admin' },
     { id: 2, name: 'Jane Smith', email: 'jane@example.com', password: 'jane', role: 'User' },
     { id: 3, name: 'Bob Johnson', email: 'bob@example.com', password: 'bob', role: 'User' },
   ];
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      navigate('/login');
+    }
+  }, [navigate]);
+ 
 const Loginbymockdata = async( email , password ) =>{
  try {
       const res = await axios.post('https://user-list-crud-opration-backend.vercel.app/api/login', { email, password });
