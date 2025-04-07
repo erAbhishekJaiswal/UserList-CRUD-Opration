@@ -66,7 +66,7 @@ const Myprofile = () => {
       {!loading && (
         <div className="profile-card">
           <div className="image">
-            <img
+            <img className="inner-image"
               src="https://cdn.pixabay.com/photo/2018/08/28/13/29/avatar-3637561_1280.png"
               width="300px"
               height="300px"
