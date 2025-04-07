@@ -28,7 +28,8 @@ body {
     align-items: center;
     justify-content: center;
     height: 93vh;
-    background: linear-gradient(180deg, #0100ffe0, #00ff00ad);
+    background: linear-gradient(135deg, rgb(110, 142, 251), rgb(167, 119, 227));
+/*     background: linear-gradient(180deg, #0100ffe0, #00ff00ad); */
     /* background-color: lightgrey; */
     /* background-color: linear-gradient(45deg, #f43c3c, #3131f0);
     background-color: radial-gradient(circle, #f43c3c, #3131f0); */
