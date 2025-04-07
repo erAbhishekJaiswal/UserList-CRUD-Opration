@@ -55,7 +55,7 @@ const Loginbymockdata = async( email , password ) =>{
               <h3>{user.name}</h3>
               <p><strong>Email:</strong> {user.email}</p>
               <p><strong>Role:</strong> {user.role}</p>
-              <button className="login-btn" onClick={Loginbymockdata(user.email,user.password)}>Login as {user.name.split(' ')[0]}</button>
+              <button className="login-btn" onClick={() => Loginbymockdata(user.email,user.password)}>Login as {user.name.split(' ')[0]}</button>
             </div>
           ))}
         </div>
