@@ -3,10 +3,26 @@ import '../cssfiles/HomePage.css';
 const Home = () => {
  // Mock user data
   const mockUsers = [
-    { id: 1, name: 'John Doe', email: 'john@example.com', role: 'Admin' },
-    { id: 2, name: 'Jane Smith', email: 'jane@example.com', role: 'User' },
-    { id: 3, name: 'Bob Johnson', email: 'bob@example.com', role: 'User' },
+    { id: 1, name: 'John Doe', email: 'john@example.com', password: 'john', role: 'Admin' },
+    { id: 2, name: 'Jane Smith', email: 'jane@example.com', password: 'jane', role: 'User' },
+    { id: 3, name: 'Bob Johnson', email: 'bob@example.com', password: 'bob', role: 'User' },
   ];
+const Loginbymockdata = async( email , password ) =>{
+ try {
+      const res = await axios.post('https://user-list-crud-opration-backend.vercel.app/api/login', { email, password });
+      console.log(res.data.user);
+      const id = res.data.user._id;
+      console.log(res.data.token);
+      localStorage.setItem('token', res.data.token);
+      localStorage.setItem('id', res.data.user._id);
+      setToken(res.data.token);
+      navigate(`/users`);
+    } catch (error) {
+      console.log(error.message);
+    }
+}
+
+
 
   return (
     <div className="home-container">
@@ -27,7 +43,7 @@ const Home = () => {
               <h3>{user.name}</h3>
               <p><strong>Email:</strong> {user.email}</p>
               <p><strong>Role:</strong> {user.role}</p>
-              <button className="login-btn">Login as {user.name.split(' ')[0]}</button>
+              <button className="login-btn" onClick={Loginbymockdata(user.email,user.password)}>Login as {user.name.split(' ')[0]}</button>
             </div>
           ))}
         </div>
