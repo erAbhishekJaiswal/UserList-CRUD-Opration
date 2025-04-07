@@ -20,8 +20,8 @@ const Navbar = () => {
   const logoutbtn = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('id');
-    window.location.reload();
-    navigate('/login');
+    // window.location.reload();
+    navigate('/');
   }
 
   return (
