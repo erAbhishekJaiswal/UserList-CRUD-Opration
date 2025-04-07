@@ -4,7 +4,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: darkcyan;
+    background: linear-gradient(135deg, rgb(110, 142, 251), rgb(167, 119, 227));
+/*     background-color: darkcyan; */
   }
   .user-list{
     display: flex;
