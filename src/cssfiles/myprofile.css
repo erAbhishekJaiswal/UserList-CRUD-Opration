@@ -19,7 +19,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #984545;
+  background-color: #1b95d9;
 }
 .image{
   width: 100%;
@@ -35,6 +35,9 @@
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
   margin: 0 auto;
 
+}
+.inner-image{
+  border-radius: 50%;
 }
 .textbox{
   width: 80%;
