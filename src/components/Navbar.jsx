@@ -31,8 +31,8 @@ const Navbar = () => {
         <ul className='ullinks'>
           {token ?
             <>
-              <li className='list'><Link className='link' to={`/myprofile/${id}`}>Users</Link></li>
-              <li className='list'><Link className='link' to={'/users'}>< CgProfile /> </Link></li>
+              <li className='list'><Link className='link' to={'/users'}>User List</Link></li>
+              <li className='list'><Link className='link' to={`/myprofile/${id}`}>< CgProfile /></Link></li>
               {/* <li className='list'><Link className='link' to={'/rolemanagement'}>Role Management</Link></li> */}
               <li className='list'><button onClick={logoutbtn} className='logoutbtn'>Logout</button></li>
             </> : <>
