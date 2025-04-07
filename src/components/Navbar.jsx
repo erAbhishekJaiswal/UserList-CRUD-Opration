@@ -39,6 +39,7 @@ const Navbar = () => {
               {/* <li className='list'><Link className='link' to={'/'}>Home</Link></li> */}
               <li className='list'><Link className='link' to={'/login'}>Login</Link></li>
               <li className='list'><Link className='link' to={'/register'}>Register</Link></li>
+              <li className='list'><Link className='link' to={'/'}>Home</Link></li>
             </>
           }
         </ul>
